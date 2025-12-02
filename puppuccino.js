@@ -359,3 +359,5 @@ function travel() {
 }
 
 do { travel(); } while (theEnd !== true);
+
+// attributes??
