@@ -4,10 +4,11 @@
 
 function findLOCATION() {
 
-    let choose = {}
-    choose["a"] = new Choice(a, `STRING.`); // String displays console dialogue
-    choose["b"] = new Choice(b, `STRING.`);
-    choose["z"] = new Choice(z, `Return.`); 
+    let choose = {
+        "a" = new Choice(a, `STRING.`); // String displays console dialogue
+        "b" = new Choice(b, `STRING.`);
+        "z" = new Choice(z, `Return.`); 
+    }
     arrange = ["a", "z"] // letter to order choices
 
     if (CONDITION === true) { arrange.push("b"); arrange.sort(); } // unlock new choices per conditions met
@@ -47,10 +48,11 @@ findLOCATION();
 
 function findCave() {
 
-    let choose = {}
-    choose["a"] = new Choice(a, `Check the knapsack.`);
-    choose["b"] = new Choice(b, `Jump down the sinkhole.`);
-    choose["z"] = new Choice(z, `Leave.`);
+    let choose = {
+        "a" = new Choice(a, `Check the knapsack.`);
+        "b" = new Choice(b, `Jump down the sinkhole.`);
+        "z" = new Choice(z, `Leave.`);
+    }
     arrange = ["a", "b", "z"];
 
     if (rawDiscoveredMap.includes("Cave") === false) { rawDiscoveredMap.push(locations["cave"].name); }

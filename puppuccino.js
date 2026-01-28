@@ -1,9 +1,9 @@
 const readline = require('readline-sync');
-const {Item, Weapon, items} = require('./resources/items.js');
-const {Entity, player, pup} = require('./resources/npc.js');
-const {Container, caveKnapsack, homeChest, displayInventory, gainItem, loseItem, barter, container} = require('./resources/inventory.js');
+const {Misc, Weapon, Garment, items} = require('./resources/items.js');
+const {Entity, armorFactor, weaponFactor, playerName, player, pup} = require('./resources/npc.js');
+const {Container, caveKnapsack, homeChest, displayInventory, gainItem, loseItem, gainAll, loseAll, barter, rummage, gearUp} = require('./resources/inventory.js');
 const {Location, locations, xAxis, yAxis, theEnd, rawDiscoveredMap, rawFullMap, playerMove, statusCompass, statusMap, arrange, Choice, findHome, findCave, travel, gameLoop} = require('./resources/map.js');
 
-player.name = readline.question(`> What is your name?\n>> `);
+playerName();
 
 gameLoop();
